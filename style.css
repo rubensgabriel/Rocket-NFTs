@@ -2,9 +2,9 @@
     --body-background: #0e0e0e;
     --color-logo: #ff5b50;
     --card-color: #252525;
-    --text-color: #fff;
+    --color-white: #fff;
     --subtitle-color: #5a5757;
-    --black-text: #000;
+    --color-black: #000;
     --color-input: #0D0D0D;
   }
 
@@ -24,7 +24,7 @@ a {
 
 body {
     background-color: var(--body-background);
-    color: var(--text-color);
+    color: var(--color-white);
 }
 
 body * {
@@ -38,10 +38,12 @@ body * {
 /* ==================== HEADER ==================== */
 header {
   background: url('./assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .menu-principal {
-  padding: 30px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -52,7 +54,7 @@ header {
 }
 
 .menu-principal li a {
-  color: var(--text-color);
+  color: var(--color-white);
 }
 
 .btn-menu {
@@ -60,11 +62,51 @@ header {
   align-items: center;
   gap: 15px;
   padding: 6px 12px;
+  font-weight: 700;
+  color: var(--color-black);
+  background-color: var(--color-white);
 }
 
 .header-info {
+  margin: 30px 0 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header-artistas p {
+  max-width: 50ch;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.header-artistas-images {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 55px;
+}
+
+.header-artistas-images > div {
   display: flex;
 }
+
+.header-artistas-images > div .img1 {
+  z-index: 5;
+  
+}
+.header-artistas-images > div .img2 {
+  margin-left: -70px;
+  z-index: 4;
+}
+.header-artistas-images > div .img3 {
+  margin-left: -70px;
+  z-index: 3;
+}
+.header-artistas-images > div .img4 {
+  margin-left: -70px;
+  z-index: 2;
+}
+
+
 
 .header-imagens {
   display: grid;
