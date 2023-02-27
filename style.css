@@ -1,11 +1,12 @@
 :root {
     --body-background: #0e0e0e;
-    --color-logo: #ff5b50;
     --card-color: #252525;
-    --color-white: #fff;
     --subtitle-color: #5a5757;
-    --color-black: #000;
     --color-input: #0D0D0D;
+
+    --color-destaque: #ff5b50;
+    --color-white: #fff;
+    --color-black: #000;
   }
 
 * {
@@ -22,6 +23,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
     background-color: var(--body-background);
     color: var(--color-white);
@@ -34,6 +40,10 @@ body * {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.destaque {
+  color: var(--color-destaque);
 }
 /* ==================== HEADER NAVEGAÇÃO ==================== */
 header {
@@ -84,7 +94,7 @@ header {
 }
 
 .btn-menu:hover span {
-  color: var(--color-logo);
+  color: var(--color-destaque);
 }
 
 .btn-menu:hover {
@@ -145,7 +155,7 @@ header {
 }
 
 .header-info .destaque {
-  color: var(--color-logo);
+  color: var(--color-destaque);
 }
 
 .header-imagens {
@@ -200,38 +210,67 @@ header {
   }
 }
 
-
-
-
-
+/* ====================== main ============================== */
 .descritivo {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    height: 450px;
-    gap: 50px;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 150px;
 }
 
 .dados {
-    grid-row: span 2;
-    border-right: 1px solid white;
-    align-self: center;
-    height: 550px;
-    max-width: 200px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 120px 60px;
+  border-bottom: 1px solid #5a5757;
+  border-right: 1px solid #5a5757;
 }
 
-.texto_descricao {
-    line-height: 30px;
+.dados li {
+  color: var(--subtitle-color);
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.imagem {
-    grid-column: span 2;
+.dados li + li {
+  margin-top: 70px;
 }
 
-
-/* 
-img {
-  display: block;
-  max-width: 100%;
+.dados li p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-*/
+.dados span {
+  color: var(--color-white);
+  font-size: 50px;
+}
+
+.texto {
+  grid-column: 2/4;
+  padding: 70px;
+  display: flex;
+  gap: 120px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.texto > div a {
+  display: inline-block;
+  margin-top: 60px;
+  color: var(--color-white);
+  text-decoration: underline;
+  transition: color .4s ease-in;
+  padding: 6px;
+  border: 1px solid transparent;
+}
+
+.texto > div a:hover {
+  color: var(--color-destaque);
+  border-color: var(--color-destaque);
+  text-decoration: none;
+}
+
+.foto-larga {
+  grid-column: 2/4;
+}
