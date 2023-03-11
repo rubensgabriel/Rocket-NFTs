@@ -1,0 +1,50 @@
+@import 'header.css';
+@import 'main.css';
+
+:root {
+    --body-background: #0e0e0e;
+    --card-color: #252525;
+    --subtitle-color: #5a5757;
+    --color-input: #0D0D0D;
+
+    --color-destaque: #ff5b50;
+    --color-white: #fff;
+    --color-black: #000;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+    background-color: var(--body-background);
+    color: var(--color-white);
+}
+
+body * {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destaque {
+  color: var(--color-destaque);
+}
